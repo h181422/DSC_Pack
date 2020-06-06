@@ -79,4 +79,32 @@ class cfgVehicles
             "DSC_Pack\DSCGear\data\GreengoJacket.paa"
         };
     };
+
+    
+    class CargoPants_ColorBase;
+
+    class DSC_Black_Pants : CargoPants_ColorBase
+    {
+        scope=2;
+        displayName="DSC Black Pants";
+        descriptionShort="A nice pair of black pants.";
+        itemsCargoSize[]={6,5};
+
+        hiddenSelections[]=
+        {
+            "zbytek",
+            "camoGround",
+            "camoMale",
+            "camoFemale"
+        };
+
+        hiddenSelectionsTextures[]=
+        {
+            "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_pants_black.paa"
+        };
+    };
 };
