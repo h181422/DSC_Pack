@@ -5,7 +5,9 @@ class CfgPatches
         units[]=
         {
             "DSC_Hoodie",
-            "DSC_Greengo_Jacket"
+            "DSC_Greengo_Jacket",
+            "DSC_Black_Pants",
+            "Sol_Hoodie_Black"
         };
 
         weapons[]={};
@@ -72,11 +74,11 @@ class cfgVehicles
 
         hiddenSelectionsTextures[]=
         {
-            "DSC_Pack\DSCGear\data\GreengoJacket.paa",
-            "DSC_Pack\DSCGear\data\GreengoJacket.paa",
-            "DSC_Pack\DSCGear\data\GreengoJacket.paa",
-            "DSC_Pack\DSCGear\data\GreengoJacket.paa",
-            "DSC_Pack\DSCGear\data\GreengoJacket.paa"
+            "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
+            "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
+            "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
+            "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
+            "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa"
         };
     };
 
@@ -105,6 +107,30 @@ class cfgVehicles
             "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
             "DSC_Pack\DSCGear\data\dsc_pants_black.paa",
             "DSC_Pack\DSCGear\data\dsc_pants_black.paa"
+        };
+    };
+
+    class Sol_Hoodie_Black : Hoodie_ColorBase
+    {
+        scope=2;
+        displayName="Solidarity Hoodie";
+        descriptionShort="A hoodie for revolutionaries.";
+
+        hiddenSelections[]=
+        {
+            "zbytek",
+            "camoGround",
+            "camoMale",
+            "camoFemale"
+        };
+
+        hiddenSelectionsTextures[]=
+        {
+            "DSC_Pack\DSCGear\data\SOL_hoodie_black.paa",
+            "DSC_Pack\DSCGear\Data\SOL_hoodie_black.paa",
+            "DSC_Pack\DSCGear\Data\SOL_hoodie_black.paa",
+            "DSC_Pack\DSCGear\Data\SOL_hoodie_black.paa",
+            "DSC_Pack\DSCGear\Data\SOL_hoodie_black.paa"
         };
     };
 };
