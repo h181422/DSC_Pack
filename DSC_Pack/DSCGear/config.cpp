@@ -7,7 +7,8 @@ class CfgPatches
             "DSC_Hoodie",
             "DSC_Greengo_Jacket",
             "DSC_Black_Pants",
-            "Sol_Hoodie_Black"
+            "Sol_Hoodie_Black",
+            "DSC_Jacket_Black"
         };
 
         weapons[]={};
@@ -61,7 +62,7 @@ class cfgVehicles
     {
         scope=2;
         displayName="Greengos private jacket";
-        descriptionShort="A hoodie for Greengo.";
+        descriptionShort="A jacket for Greengo.";
         itemsCargoSize[]={7,6};
 
         hiddenSelections[]=
@@ -79,6 +80,31 @@ class cfgVehicles
             "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
             "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa",
             "DSC_Pack\DSCGear\data\dsc_greengo_jacket.paa"
+        };
+    };
+
+    class DSC_Jacket_Black : TrackSuitJacket_ColorBase
+    {
+        scope=2;
+        displayName="Black jacket";
+        descriptionShort="A nice black jacket.";
+        itemsCargoSize[]={7,6};
+
+        hiddenSelections[]=
+        {
+            "zbytek",
+            "camoGround",
+            "camoMale",
+            "camoFemale"
+        };
+
+        hiddenSelectionsTextures[]=
+        {
+            "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black.paa"
         };
     };
 
