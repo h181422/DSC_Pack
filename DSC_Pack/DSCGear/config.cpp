@@ -8,7 +8,8 @@ class CfgPatches
             "DSC_Greengo_Jacket",
             "DSC_Black_Pants",
             "Sol_Hoodie_Black",
-            "DSC_Jacket_Black"
+            "DSC_Jacket_Black",
+            "DSC_Jacket_Black_no"
         };
 
         weapons[]={};
@@ -105,6 +106,31 @@ class cfgVehicles
             "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
             "DSC_Pack\DSCGear\data\dsc_jacket_black.paa",
             "DSC_Pack\DSCGear\data\dsc_jacket_black.paa"
+        };
+    };
+
+    class DSC_Jacket_Black_no : TrackSuitJacket_ColorBase
+    {
+        scope=2;
+        displayName="Black jacket";
+        descriptionShort="A nice black jacket, with the norwegian flag.";
+        itemsCargoSize[]={7,6};
+
+        hiddenSelections[]=
+        {
+            "zbytek",
+            "camoGround",
+            "camoMale",
+            "camoFemale"
+        };
+
+        hiddenSelectionsTextures[]=
+        {
+            "DSC_Pack\DSCGear\data\dsc_jacket_black_no.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black_no.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black_no.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black_no.paa",
+            "DSC_Pack\DSCGear\data\dsc_jacket_black_no.paa"
         };
     };
 
