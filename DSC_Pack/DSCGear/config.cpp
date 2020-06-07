@@ -225,7 +225,7 @@ class cfgVehicles
 		hiddenSelections[] = {"camo"};
 		hiddenSelectionsTextures[] = 
 		{
-			"DSC_Pack\DSCGear\Data\dsc_Container_co.paa"
+			"DSC_Pack\DSCGear\Data\TUT_Container_co.paa"
 		};
 
 		class EventHandlers
