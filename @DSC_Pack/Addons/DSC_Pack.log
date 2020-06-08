@@ -1,3 +1,0 @@
-Creating texture headers file...
-6 texture headers saved to file "P:\DSC_Pack.git\DSC_Pack\texHeaders.bin"
-w:\C_branch\Poseidon\Arrowhead\El\FileServer\fileServer.cpp(2513) : Assertion failed 'req->RefCounter()==1'
