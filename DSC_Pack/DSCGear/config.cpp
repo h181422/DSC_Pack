@@ -38,6 +38,7 @@ class cfgVehicles
         scope=2;
         displayName="DSC Hoodie";
         descriptionShort="A hoodie for professionals.";
+        itemsCargoSize[]={7,6};     
 
         hiddenSelections[]=
         {
@@ -167,6 +168,7 @@ class cfgVehicles
         scope=2;
         displayName="Solidarity Hoodie";
         descriptionShort="A hoodie for revolutionaries.";
+        itemsCargoSize[]={7,6};
 
         hiddenSelections[]=
         {
