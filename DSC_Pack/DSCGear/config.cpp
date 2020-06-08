@@ -183,7 +183,7 @@ class cfgVehicles
             "DSC_Pack\DSCGear\data\DSC_SOL_hoodie_black.paa",
             "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black.paa",
             "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black.paa",
-            "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black.paa",
+            "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black_f.paa",
             "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black.paa"
         };
     };
