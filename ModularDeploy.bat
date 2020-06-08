@@ -7,14 +7,16 @@ set ProjectRoot=DSC_Pack.git
 set ProjectSrc=DSC_Pack
 set ProjectDist=@%ProjectSrc%
 set outputDir=B:\Program Files (x86)\Steam\steamapps\common\DayZ\!Workshop
+
 goto cppToBin
 
 :cppToBin
 cls
 @echo off
-setlocal enableExtensions enableDelayedExpansion
-set br=^
+setlocal enableExtensions 
+rem enableDelayedExpansion
 
+set br=^
 
 rem br;
 cd /d "%ProjectPath%\%projectRoot%\%ProjectSrc%"		&rem Working/{temp files} Directory . pat>->paf ;
@@ -35,12 +37,10 @@ for /f usebackq^ tokens^=*^ delims^=^ eol^= %%f in (`dir /b /a /s "%~1"`) do (
 )
 goto makePBO
 
-
 :makePBO
 cls
 cd /d "%BinPBOPath%" 
 start BinPBO.exe "%ProjectPath%\%ProjectRoot%\%ProjectSrc%" "%ProjectPath%\%ProjectRoot%\%ProjectDist%\Addons" -project "%ProjectPath%\%ProjectRoot%\%ProjectSrc%" -sign "%key%"
-pause
 goto deployPBO
 
 :deployPBO
