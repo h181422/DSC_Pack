@@ -187,4 +187,22 @@ class cfgVehicles
             "DSC_Pack\DSCGear\Data\DSC_SOL_hoodie_black.paa"
         };
     };
+
+    class M65Jacket_ColorBase;  
+
+    class DSC_M65_Jacket_M90 : M65Jacket_ColorBase
+    {
+        scope=2;
+        displayName="M65 Jacket (M90)";
+        descriptionShort="For the wannabe Swedes in us all.";
+
+        hiddenSelectionsTextures[]=
+        {
+            "DSC_Pack\DSCGear\data\m65_jacket_m90_co.paa",
+            "DSC_Pack\DSCGear\Data\m65_jacket_m90_co.paa",
+            "DSC_Pack\DSCGear\Data\m65_jacket_m90_co.paa",
+            "DSC_Pack\DSCGear\Data\m65_jacket_m90_co.paa",
+            "DSC_Pack\DSCGear\Data\m65_jacket_m90_co.paa"
+        };
+    }
 };
