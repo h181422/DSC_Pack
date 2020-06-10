@@ -164,7 +164,7 @@ class CustomMission: MissionServer
 
 	void PopulateItem(string slot, string items[]){
 		EntityAI entity = player.FindAttachmentBySlotName(slot);
-		for (int i=0; i< sizeof(items)){
+		for (int i=0; i< sizeof(items);i++){
 			entity.GetInventory().CreateInInventory(items[i]);	
 		}
 		// ItemBase.Cast() ?? 
