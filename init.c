@@ -146,6 +146,30 @@ class CustomMission: MissionServer
 		return m_player;
 	}
 
+	void GivePlayerItem(PlayerBase player, string slot, string className){
+		EntityAI entity = player.FindAttachmentBySlotName(slot);
+		if (entity && entity.ClassName()){
+			// Print("Deleting "+entity);
+			GetGame().ObjectDelete(entity);	
+		}
+		 
+		player.GetInventory().CreateInInventory(className);
+	}
+
+	void GivePlayerSet(PlayerBase player, string kit[]){
+			GivePlayerItem(player, "Body", kit[0]);	
+			GivePlayerItem(player, "Pants", kit[1]);
+			GivePlayerItem(player, "Shoulder1", kit[2]);
+	}
+
+	void PopulateItem(string slot, string items[]){
+		EntityAI entity = player.FindAttachmentBySlotName(slot);
+		for (int i=0; i< sizeof(items)){
+			entity.GetInventory().CreateInInventory(items[i]);	
+		}
+		// ItemBase.Cast() ?? 
+	}
+
 	// ------------------------------------------------------------
 	// Override StartingEquipSetup
 	// ------------------------------------------------------------
@@ -156,31 +180,35 @@ class CustomMission: MissionServer
 			Print("DEBUG: Starting Equipment Setup...")
 			
 			if (player && player.GetIdentity()) {
-				string id = player.GetIdentity().GetId()
+				//todo maybe 2D Array of ID + Gear Set
+				// string id = player.GetIdentity().GetPlainId() 		//Steam ID
+				string id = player.GetIdentity().GetId()				//DayZ ID
 				string greengo = "I902fiOMut2MxacJJyYZxMLWdLmNynmd9xjJq-ud6IQ="
 				string me = "yNWKGTL0KUvmYS-8Kk-DNhEonqcKIGSOmIVziUjav2M="
 				
 				switch(id) {
+					//Todo define standard for "Kit" i.e. Top is always 0, bottoms always 1, etc etc
 					case greengo:
-						// EntityAI itemTop;
-						// EntityAI itemEnt;
-						// ItemBase itemBs;
-						// EntityAI itemTop = player.FindAttachmentBySlotName("Body");
-						//Greengo's Gear here.
-						//player.GetInventory().CreateInInventory()
+						//TODO Greengo's Gear.
 					break;
 					case me:
-						Print("DUAL GEAR SET");
-						// string[] dualKit = ["DSC_Sol_Hoodie_Black", "DSC_Black_Pants", "A2WM110_black", "A2Suppressor", "A2WM110_black","A2WM110_black","A2WM110_black", "M68Optic", "Battery9V"];
-						EntityAI dualTop = player.FindAttachmentBySlotName("Body");
-					
-						string topName = dualTop.ClassName();
-						if (topName != ""){
-							GetGame().ObjectDelete(dualTop)
-							dualTop =  player.GetInventory().CreateInInventory("DSC_Sol_Hoodie_Black")
-							Print(topName);
-						}			
-						// EntityAI items = player.GetInventory().CreateInInventory(itemTop);
+						string dualKit[] = {
+							"DSC_Sol_Hoodie_Black",
+							"DSC_Black_Pants", 
+							"A2WM110_black", 
+							"A2Suppressor", 
+							"A2WM110_mag",
+							"M68Optic", 
+							"Battery9V"
+							//TODO BOOTS, GLOVES, HELMET,
+						};
+						player.RemoveAllItems();
+						player.GetSlotsCountCorrect()
+						GivePlayerItem(player, "Body", dualKit[0]);
+						GivePlayerItem(player, "Pants", dualKit[1]);
+						GivePlayerItem(player, "Shoulder1", dualKit[2]);
+						PopulateItem("body", {dualKit[3], dualKit[4],  dualKit[4],  dualKit[4],  dualKit[5],  dualKit[6] });
+
 					break;
 					default: 
 					SetStartingGear(player);
