@@ -162,7 +162,7 @@ class CustomMission: MissionServer
 			GivePlayerItem(player, "Shoulder1", kit[2]);
 	}
 
-	void PopulateItem(string slot, string items[]){
+	void PopulateItem(PlayerBase player, string slot, string items[]){
 		EntityAI entity = player.FindAttachmentBySlotName(slot);
 		for (int i=0; i< sizeof(items);i++){
 			entity.GetInventory().CreateInInventory(items[i]);	
@@ -207,7 +207,7 @@ class CustomMission: MissionServer
 						GivePlayerItem(player, "Body", dualKit[0]);
 						GivePlayerItem(player, "Pants", dualKit[1]);
 						GivePlayerItem(player, "Shoulder1", dualKit[2]);
-						PopulateItem("body", {dualKit[3], dualKit[4],  dualKit[4],  dualKit[4],  dualKit[5],  dualKit[6] });
+						PopulateItem(player, "Body", {dualKit[3], dualKit[4],  dualKit[4],  dualKit[4],  dualKit[5],  dualKit[6] });
 
 					break;
 					default: 
