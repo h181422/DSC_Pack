@@ -65,7 +65,7 @@ class cfgVehicles
         scope=2;
         displayName="Greengos private jacket";
         descriptionShort="A jacket for Greengo.";
-        itemsCargoSize[]={7,6};
+        itemsCargoSize[]={10,100};
 
         hiddenSelections[]=
         {
@@ -90,8 +90,7 @@ class cfgVehicles
         scope=2;
         displayName="Black jacket";
         descriptionShort="A nice black jacket.";
-        itemsCargoSize[]={7,6};
-
+        itemsCargoSize[]={7,6};    
         hiddenSelections[]=
         {
             "zbytek",
@@ -113,7 +112,7 @@ class cfgVehicles
     class DSC_Jacket_Black_no : TrackSuitJacket_ColorBase
     {
         scope=2;
-        displayName="Black jacket";
+        displayName="Black Jacket (Norwegian)";
         descriptionShort="A nice black jacket, with the norwegian flag.";
         itemsCargoSize[]={7,6};
 
@@ -168,7 +167,7 @@ class cfgVehicles
         scope=2;
         displayName="Solidarity Hoodie";
         descriptionShort="A hoodie for revolutionaries.";
-        itemsCargoSize[]={7,6};
+        itemsCargoSize[]={10,100};
 
         hiddenSelections[]=
         {
